@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bookmarker</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/style.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="js/scripts.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="columns">
+        <div class="column container is-fluid">
+            <div>
+                <h1 class="title is-4 has-text-centered">Add a new Bookmark!</h1>
+                <form action="" id="formdata">
+                    <div class="field">
+                        <label class="label">Name</label>
+                        <div class="control">
+                            <input class="input" type="text" id="name" name="name" placeholder="Example">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">URL</label>
+                        <div class="control">
+                            <input class="input" type="url" id="url" name="url" placeholder="example.com">
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Tags (Separated by commas)</label>
+                        <div class="control">
+                            <input class="input" type="text" id="tags" name="tags" placeholder="ex. video, blog, etc">
+                        </div>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link" id="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="column" id="linkside">
+            <a class="button is-warning is-large is-fullwidth" onclick="getLinks()">Clear Search</a>
+
+            <table class="table is-hoverable is-fullwidth" id="linkstable">
+            </table>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    $("#header").load("header.html"); 
+</script>
+
+</html>
